@@ -1,4 +1,4 @@
-body {
+2body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -111,32 +111,3 @@ footer {
     padding: 10px 0;
 }
 
-.sound-control {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
-
-.sound-control img {
-    width: 30px;
-    height: 30px;
-}
-
-.sound-control img.muted {
-    filter: grayscale(100%) brightness(0.5);
-}
-
-.sound-control img.muted::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 2px;
-    background-color: #fff;
-    transform: translate(-50%, -50%) rotate(45deg);
-    transform-origin: center;
-}
