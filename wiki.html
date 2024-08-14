@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki</title>
+    <title>Glerius | Wiki</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,9 +17,7 @@
                 <a href="index.html#biography">Biyografi</a>
                 <a href="wiki.html">Wiki</a>
             </nav>
-            <div class="sound-control" onclick="toggleSound()">
-                <img src="https://iconarchive.com/download/i107783/google/noto-emoji-animals-nature/rat.ico" alt="Sound Icon" id="soundIcon">
-            </div>
+            
         </div>
     </header>
 
@@ -38,27 +36,10 @@
         <p>&copy; 2024 Tüm Hakları Saklıdır.</p>
     </footer>
 
-    <audio id="backgroundMusic" loop>
-        <source src="https://example.com/path/to/faded.mp3" type="audio/mpeg">
-        Tarayıcınız ses dosyasını desteklemiyor.
-    </audio>
+    
 
     <script>
-        const backgroundMusic = document.getElementById('backgroundMusic');
-        const soundIcon = document.getElementById('soundIcon');
-
-        // Başlangıçta müziği çal
-        backgroundMusic.play();
-
-        function toggleSound() {
-            if (backgroundMusic.paused) {
-                backgroundMusic.play();
-                soundIcon.classList.remove('muted');
-            } else {
-                backgroundMusic.pause();
-                soundIcon.classList.add('muted');
-            }
-        }
+    
 
         function searchWiki() {
             const query = document.getElementById('searchInput').value;
