@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Page Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="overlay">
+            <img src="https://cdn.glitch.global/87515a1f-e361-44c2-9701-8dcdefe55fca/Picsart_24-08-14_00-11-28-759.png?v=1723630902261" alt="Logo" class="logo">
+            <nav class="menu">
+                <a href="#projects">Projeler</a>
+                <a href="#biography">Biyografi</a>
+                <a href="wiki.html">Wiki</a>
+            </nav>
+            <div class="sound-control" onclick="toggleSound()">
+                <img src="https://iconarchive.com/download/i107783/google/noto-emoji-animals-nature/rat.ico" alt="Sound Icon" id="soundIcon">
+            </div>
+        </div>
+    </header>
+
+    <section id="projects" class="section">
+        <h2>Projeler</h2>
+        <p>Projeler hakkında bilgi buraya gelecek.</p>
+    </section>
+
+    <section id="biography" class="section">
+        <h2>Biyografi</h2>
+        <p>Biyografi hakkında bilgi buraya gelecek.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <audio id="backgroundMusic" loop>
+        <source src="faded.mp3" type="audio/mpeg">
+        Tarayıcınız ses dosyasını desteklemiyor.
+    </audio>
+
+    <script>
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const soundIcon = document.getElementById('soundIcon');
+
+        // Başlangıçta müziği çal
+        backgroundMusic.play();
+
+        function toggleSound() {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                soundIcon.classList.remove('muted');
+            } else {
+                backgroundMusic.pause();
+                soundIcon.classList.add('muted');
+            }
+        }
+    </script>
+</body>
+</html>
