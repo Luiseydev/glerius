@@ -15,9 +15,7 @@
                 <a href="#biography">Biyografi</a>
                 <a href="wiki.html">Wiki</a>
             </nav>
-            <div class="sound-control" onclick="toggleSound()">
-                <img src="https://www.freepik.com/icon/volume_6052513#fromView=resource_detail&position=4" alt="Sound Icon" id="soundIcon">
-            </div>
+            
         </div>
     </header>
 
@@ -35,27 +33,7 @@
         <p>&copy; 2024 Tüm Hakları Saklıdır.</p>
     </footer>
 
-    <audio id="backgroundMusic" loop>
-        <source src="https://m.soundcloud.com/sheshizm2/alan-walker-faded-original-copy" type="audio/mpeg">
-        Tarayıcınız ses dosyasını desteklemiyor.
-    </audio>
+    
 
-    <script>
-        const backgroundMusic = document.getElementById('backgroundMusic');
-        const soundIcon = document.getElementById('soundIcon');
-
-        // Başlangıçta müziği çal
-        backgroundMusic.play();
-
-        function toggleSound() {
-            if (backgroundMusic.paused) {
-                backgroundMusic.play();
-                soundIcon.classList.remove('muted');
-            } else {
-                backgroundMusic.pause();
-                soundIcon.classList.add('muted');
-            }
-        }
-    </script>
 </body>
 </html>
