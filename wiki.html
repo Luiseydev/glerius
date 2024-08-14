@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="overlay">
+            <a href="index.html" class="logo-link">
+                <img src="https://cdn.glitch.global/87515a1f-e361-44c2-9701-8dcdefe55fca/Picsart_24-08-14_00-11-28-759.png?v=1723630902261" alt="Logo" class="logo">
+            </a>
+            <nav class="menu">
+                <a href="index.html#projects">Projeler</a>
+                <a href="index.html#biography">Biyografi</a>
+                <a href="wiki.html">Wiki</a>
+            </nav>
+            <div class="sound-control" onclick="toggleSound()">
+                <img src="https://iconarchive.com/download/i107783/google/noto-emoji-animals-nature/rat.ico" alt="Sound Icon" id="soundIcon">
+            </div>
+        </div>
+    </header>
+
+    <section id="search" class="section">
+        <h2>Wiki Ara</h2>
+        <input type="text" id="searchInput" placeholder="Arama yap...">
+        <button onclick="searchWiki()">Ara</button>
+    </section>
+
+    <section id="wiki-content" class="section">
+        <h2>Wiki Başlığı</h2>
+        <p>Bu alanda wiki içeriği olacak. Buraya istediğiniz metin ve bilgi ekleyebilirsiniz.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <audio id="backgroundMusic" loop>
+        <source src="https://example.com/path/to/faded.mp3" type="audio/mpeg">
+        Tarayıcınız ses dosyasını desteklemiyor.
+    </audio>
+
+    <script>
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const soundIcon = document.getElementById('soundIcon');
+
+        // Başlangıçta müziği çal
+        backgroundMusic.play();
+
+        function toggleSound() {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                soundIcon.classList.remove('muted');
+            } else {
+                backgroundMusic.pause();
+                soundIcon.classList.add('muted');
+            }
+        }
+
+        function searchWiki() {
+            const query = document.getElementById('searchInput').value;
+            alert(`Arama yapıldı: ${query}`);
+            // Gerçek arama işlevini burada uygulayın
+        }
+    </script>
+</body>
+</html>
